@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
         fontFamily: {
-          Epilogue: 'Epilogue, sans-serif', 
+          'Epilogue': "'Epilogue', 'sans-serif'", 
         },
         colors: {
           AlmostWhite:' hsl(0, 0%, 98%)',
