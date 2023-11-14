@@ -4,9 +4,9 @@ import logo from '../assets/logo.svg'
 
 export const NavBar =()=>{
     return(
-        <nav className="flex justify-between">
+        <nav className="flex justify-between py-[1.5rem] px-[2.7rem]">
             <div className="flex gap-[4rem]">
-            <img src={logo} alt="" />
+            <img src={logo} alt=""/>
             <ul className="flex gap-[3rem]">
                 <li>Features</li>
                 <li>Company</li>
