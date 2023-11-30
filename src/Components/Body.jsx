@@ -3,7 +3,7 @@
 
 export const Body =()=>{
     return(
-        <div>
+        <div className="h-screen bg-blue-400">
             Main
         </div>
     )
