@@ -21,7 +21,9 @@ export const NavBar =()=>{
                 <img src={logo} width={screenWidth > 768? 110:80}/>
                 {
                     screenWidth>768?
-                    <NavContent/>:null
+                    <div className={`flex gap-[3rem] z-40`}>
+                        
+                    </div>:null
                 }
                 </div>
                 <div className="flex gap-[2.8rem]">
@@ -34,7 +36,17 @@ export const NavBar =()=>{
                         </button> 
                     }
                 </div>
-                <div className="fixed right-0 bg-red-300 h-[192vh] z-10"> ldsfjlsdfj</div>
+                {
+                    screenWidth<768 && menuOpen?
+                    <div className="fixed right-0 bg-red-300 h-[192vh] z-10"> 
+                        <div className="bg-blue-300 mt-[40rem] h-[12rem] w-[4rem]"> 
+                        <button>Features</button>
+            <button>Company</button>
+            <button>Careers</button>
+            <button>About</button> 
+                        </div>
+                    </div>:null
+                }
             </nav>
         </div>
     )
@@ -44,13 +56,10 @@ export const NavBar =()=>{
 
 
 
-export function NavContent() {
+export function NavContent(width) {
     return (
-        <div className="flex gap-[3rem]">
-            <button>Features</button>
-            <button>Company</button>
-            <button>Careers</button>
-            <button>About</button> 
+        <div className={`flex gap-[3rem] z-40`}>
+            
         </div>
     );
 }
