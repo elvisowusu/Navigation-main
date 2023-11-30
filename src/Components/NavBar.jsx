@@ -41,9 +41,9 @@ export const NavBar =()=>{
                     <div className="fixed right-0 bg-red-300 h-[192vh] z-10"> 
                         <div className="bg-blue-300 mt-[40rem] h-[12rem] w-[4rem]"> 
                         <button>Features</button>
-            <button>Company</button>
-            <button>Careers</button>
-            <button>About</button> 
+                        <button>Company</button>
+                        <button>Careers</button>
+                        <button>About</button> 
                         </div>
                     </div>:null
                 }
