@@ -38,14 +38,18 @@ export const NavBar =()=>{
                 </div>
                 {
                     screenWidth<768 && menuOpen?
-                    <div className="fixed right-0 bg-red-300 h-[192vh] z-10"> 
+                    <>
+                    <div className="fixed right-0 bg-gray-400 opacity-70 w-full h-[192vh] z-10"></div>
+                    <div className="fixed right-0 bg-white w-2/3 h-[192vh] z-20 "> 
                         <div className="bg-blue-300 mt-[40rem] h-[12rem] w-[4rem]"> 
                         <button>Features</button>
                         <button>Company</button>
                         <button>Careers</button>
                         <button>About</button> 
                         </div>
-                    </div>:null
+                    </div>
+                    </>
+                    :null
                 }
             </nav>
         </div>
