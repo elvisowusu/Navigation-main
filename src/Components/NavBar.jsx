@@ -6,31 +6,30 @@ export const NavBar =()=>{
 
     const [screenWidth,setScreenWidth]=useState(window.innerWidth);
     useEffect(()=>{
-        window.addEventListener("resize",()=>setScreenWidth(window.innerWidth))
-        return ()=>window.removeEventListener("resize",()=>setScreenWidth(window.innerWidth))   
+        window.addEventListener('resize',()=>setScreenWidth(window.innerWidth))
+     return window.removeEventListener('resize',()=>setScreenWidth(window.innerWidth))
     })
-
     return(
         <div>
-            {
-                screenWidth > 768?
-                <nav className="flex justify-between items-center py-[1.5rem] px-[2.7rem] text-[1.3rem]">
+            
+            <nav className="flex justify-between items-center py-[1.5rem] px-[2.7rem] text-[1.3rem]">
                 <div className="flex gap-[4rem] items-start">
                 <img src={logo} width={110}/>
-                <div className="flex gap-[3rem]">
+                {
+                    screenWidth>768?
+                    <div className="flex gap-[3rem]">
                     <button>Features</button>
                     <button>Company</button>
                     <button>Careers</button>
                     <button>About</button>
-                </div>
+                </div>:null
+                }
                 </div>
                 <div className="flex gap-[2.8rem]">
                     <button>Login</button>
                     <button className="border outline-none border-AlmostBlack px-[1.5rem] py-[0.5rem] rounded-2xl">Register</button>
                 </div>
-            </nav>:
-            <nav>hello</nav>
-            }
+            </nav>
         </div>
     )
 }
