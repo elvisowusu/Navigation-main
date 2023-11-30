@@ -22,7 +22,7 @@ export const NavBar =()=>{
                 {
                     screenWidth>768?
                     <div className={`flex gap-[3rem] z-40`}>
-                        
+                        <NavContent/>
                     </div>:null
                 }
                 </div>
@@ -31,7 +31,8 @@ export const NavBar =()=>{
                         screenWidth>768?
                         <>
                         <LoginOrSignUp/>
-                        </>:<button className="z-40"  onClick={()=>{setMenuOpen(!menuOpen)}}>
+                        </>
+                        :<button className="z-40"  onClick={()=>{setMenuOpen(!menuOpen)}}>
                             {menuOpen ? <img src={close} width={25}/> : <img src={menu} width={27}/> }
                         </button> 
                     }
@@ -40,14 +41,12 @@ export const NavBar =()=>{
                     screenWidth<768 && menuOpen?
                     <>
                     <div className="fixed right-0 bg-gray-400 opacity-70 w-full h-[192vh] z-10"></div>
-                    <div className="fixed right-0 bg-white w-2/3 h-[192vh] z-20 "> 
+                    <div className="fixed right-0 bg-white w-2/3 h-[192vh] z-20 pt-[4rem]"> 
                         <div className="bg-blue-300 mt-[40rem] h-[12rem] w-[4rem]"> 
-                        <button>Features</button>
-                        <button>Company</button>
-                        <button>Careers</button>
-                        <button>About</button> 
+                            <NavContent/>
                         </div>
                     </div>
+                    <LoginOrSignUp/>
                     </>
                     :null
                 }
@@ -62,18 +61,21 @@ export const NavBar =()=>{
 
 export function NavContent(width) {
     return (
-        <div className={`flex gap-[3rem] z-40`}>
-            
-        </div>
+        <>
+         <button>Features</button>
+         <button>Company</button>
+         <button>Careers</button>
+         <button>About</button>    
+        </>
     );
 }
 
 
-export function LoginOrSignUp() {
+export function LoginOrSignUp(size) {
     return (
-        <div className="flex gap-[3rem]">
+        <div className={`flex gap-[3rem]`}>
             <button>Login</button>
-            <button>Sign Up</button>
+            <button className="border outline-none border-AlmostBlack px-[1.5rem] py-[0.5rem] rounded-2xl">Sign Up</button>
         </div>
     );
 }
