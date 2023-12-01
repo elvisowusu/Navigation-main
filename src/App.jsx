@@ -5,7 +5,7 @@ import { Body } from './Components/Body'
 function App() {
 
   return (
-    <div className='font-Epilogue'>
+    <div className='font-Epilogue bg-AlmostWhite'>
       <NavBar/>
       <Body/>
     </div>

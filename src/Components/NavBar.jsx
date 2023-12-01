@@ -95,20 +95,24 @@ export function NavContent() {
         <>
          <div>
             <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{dispatch({type:'showFeatures'})}}>Features <img className={`mt-1 ${state.showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-            <ul className={`${state.width > 768 ? `fixed `:``}`}>
+            { state.showFeatures &&  <ul className={`bg-white mt-3 px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl left-[9rem]`:``}`}>
                 {Features.map((Features,key)=>{
-                return state.showFeatures &&   <li className="flex items-center gap-3"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
+                return  <li className="flex items-center gap-3 mt-1"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
                 })}
             </ul>
+            }
          </div>
          <div>
          <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{dispatch({type:'showCompany'})}}>Company <img className={`mt-1 ${state.showCompany & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-            <ul className={`${state.width > 768 ? `fixed `:``}`}>
+           {state.showCompany && <ul className={`bg-white mt-3 px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl`:``}`}>
                 {Company.map((Company,key)=>{
-                return state.showCompany &&   <li className="flex items-center gap-3"><a href="#">{Company}</a></li>
+                return   <li className="flex items-center gap-3 mt-1"><a href="#">{Company}</a></li>
                 })}
             </ul>
+           }
          </div>
+         <button>Careers</button>
+         <button>About</button>
         </>
     );
 }
