@@ -4,6 +4,13 @@ import menu from '../assets/icon-menu.svg'
 import close from '../assets/icon-close-menu.svg'
 import arrowUp from '../assets/icon-arrow-up.svg'
 import arrowDown from '../assets/icon-arrow-down.svg'
+import todolist from '../assets/icon-todo.svg'
+import calendar from '../assets/icon-calendar.svg'
+import reminders from '../assets/icon-reminders.svg'
+import planning from '../assets/icon-planning.svg'
+
+
+
 
 export const NavBar =()=>{
 
@@ -33,7 +40,7 @@ export const NavBar =()=>{
                         <LoginOrSignUp/>
                         </>
                         :<button className="z-40"  onClick={()=>{setMenuOpen(!menuOpen)}}>
-                            {menuOpen ? <img src={close} width={25}/> : <img src={menu} width={27}/> }
+                            {menuOpen ? <img className="fixed right-4 top-5" src={close} width={25}/> : <img src={menu} width={27}/> }
                         </button> 
                     }
                 </div>
@@ -62,12 +69,26 @@ export const NavBar =()=>{
 
 
 export function NavContent() {
+    const [showFeatures,setShowFeatures]=useState(false);
+
+    const Features = [
+    {name:'Todo List', source : todolist},
+    {name:'Calendar', source : calendar},
+    {name:'Reminders', source : reminders},
+    {name:'Planning', source : todolist},
+    ]
+
     return (
         <>
-         <button>Features <span> <img src={arrowDown} alt="" /> </span> </button>
-         <button>Company</button>
-         <button>Careers</button>
-         <button>About</button>    
+         <div>
+            <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{setShowFeatures(!showFeatures)}}>Features <img className={`mt-1 ${showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
+            {showFeatures && <ul>
+                {Features.map((Features,key)=>{
+                   return <li className="flex items-center gap-3"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
+                })}
+              </ul>
+            }
+         </div>
         </>
     );
 }
