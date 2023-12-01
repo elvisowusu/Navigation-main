@@ -95,7 +95,7 @@ export function NavContent() {
         <>
          <div>
             <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{dispatch({type:'showFeatures'})}}>Features <img className={`mt-1 ${state.showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-            <ul>
+            <ul className={`${state.width > 768 ? `fixed `:``}`}>
                 {Features.map((Features,key)=>{
                 return state.showFeatures &&   <li className="flex items-center gap-3"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
                 })}
