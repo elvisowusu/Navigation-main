@@ -53,8 +53,8 @@ export const NavBar =()=>{
                             <NavContent/>
                         </div>
                         <div className="flex flex-col items-center mt-[3rem] gap-4">
-                            <button>Login</button>
-                            <button className="border outline-none border-AlmostBlack px-[1.5rem] py-[0.3rem] w-[14rem] rounded-2xl">Rigister</button>
+                        <button className="hover:text-AlmostBlack">Login</button>
+            <button className="border outline-none hover:text-AlmostBlack hover:border-AlmostBlack px-[1.5rem] py-[0.5rem] rounded-2xl">Register</button>
                         </div>
                     </div>
                     </>
@@ -86,7 +86,7 @@ export function NavContent() {
     {name:'Todo List', source : todolist},
     {name:'Calendar', source : calendar},
     {name:'Reminders', source : reminders},
-    {name:'Planning', source : todolist},
+    {name:'Planning', source : planning},
     ]
     
     const Company = ['History', 'Our Team','Blog']
@@ -95,30 +95,30 @@ export function NavContent() {
         <>
          <div>
             <button className="navbtn" onClick={()=>{dispatch({type:'showFeatures'})}}>Features <img className={`mt-1 ${state.showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-            { state.showFeatures &&  <ul className={`bg-white mt-3 px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl left-[9rem]`:``}`}>
+            { state.showFeatures &&  <ul className={`bg-white px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl left-[9rem] mt-3`:``}`}>
                 {Features.map((Features,key)=>{
-                return  <li className="navLi"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
+                return  <li className={`navLi ${state.width > 768 ? `mt-1`:`mb-4`}`}><img src={Features.source} width={19} alt="icon" /> <a href="#">{Features.name}</a></li>
                 })}
             </ul>
             }
          </div>
          <div>
          <button className="navbtn" onClick={()=>{dispatch({type:'showCompany'})}}>Company <img className={`mt-1 ${state.showCompany & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-           {state.showCompany && <ul className={`bg-white mt-3 px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl`:``}`}>
+           {state.showCompany && <ul className={`bg-white px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl mt-3`:``}`}>
                 {Company.map((Company,key)=>{
-                return   <li className="navLi"><a href="#">{Company}</a></li>
+                return   <li className={`navLi ${state.width > 768 ? `mt-1`:`mb-4`}`}><a href="#">{Company}</a></li>
                 })}
             </ul>
            }
          </div>
-         <button className="hover:text-AlmostBlack">Careers</button>
-         <button className="hover:text-AlmostBlack">About</button>
+         <button className="hover:text-AlmostBlack mt-[0.1rem]">Careers</button>
+         <button className="hover:text-AlmostBlack mt-[0.1rem]">About</button>
         </>
     );
 }
 
 
-export function LoginOrSignUp(size) {
+export function LoginOrSignUp() {
     return (
         <div className={`flex gap-[3rem]`}>
             <button className="hover:text-AlmostBlack">Login</button>
