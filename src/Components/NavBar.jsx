@@ -67,9 +67,18 @@ export const NavBar =()=>{
 
 
 
-
+const reducer = (state, action) => {
+    switch (action.type) {
+      case 'showFeatures':
+        return {showFeatures:true,showCompany:false};
+      case 'showCompany':
+        return {showFeatures:false,showCompany:true};
+      default:
+        throw new Error();
+    }
+  }
 export function NavContent() {
-    const [showFeatures,setShowFeatures]=useState(false);
+    const [state, dispatch] = useReducer(reducer, {showFeatures:false,showCompany:false});
 
     const Features = [
     {name:'Todo List', source : todolist},
@@ -77,17 +86,25 @@ export function NavContent() {
     {name:'Reminders', source : reminders},
     {name:'Planning', source : todolist},
     ]
+    
+    const Company = ['History', 'Our Team','Blog']
 
     return (
         <>
          <div>
             <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{setShowFeatures(!showFeatures)}}>Features <img className={`mt-1 ${showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-            {showFeatures && <ul>
+            <ul>
                 {Features.map((Features,key)=>{
-                   return <li className="flex items-center gap-3"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
+                return showFeatures &&   <li className="flex items-center gap-3"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
                 })}
-              </ul>
-            }
+            </ul>
+            <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{setShowFeatures(!showFeatures)}}>Company <img className={`mt-1 ${showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
+            <ul>
+                {Company.map((Company,key)=>{
+                return showFeatures &&   <li className="flex items-center gap-3"><a href="#">{Company}</a></li>
+                })}
+            </ul>
+            
          </div>
         </>
     );
