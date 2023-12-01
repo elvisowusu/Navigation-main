@@ -49,7 +49,7 @@ export const NavBar =()=>{
                     <>
                     <div className="fixed right-0 bg-gray-400 opacity-70 w-full h-[192vh] z-10"></div>
                     <div className="fixed right-0 bg-white w-2/3 h-[192vh] z-20 pt-[4rem] px-4"> 
-                        <div className="mt-[40rem] flex flex-col items-start"> 
+                        <div className="mt-[60rem] flex flex-col items-start"> 
                             <NavContent/>
                         </div>
                         <div className="flex flex-col items-center mt-[3rem] gap-4">
@@ -70,15 +70,17 @@ export const NavBar =()=>{
 const reducer = (state, action) => {
     switch (action.type) {
       case 'showFeatures':
-        return {showFeatures:true,showCompany:false};
+        return {...state,showFeatures:!state.showFeatures};
       case 'showCompany':
-        return {showFeatures:false,showCompany:true};
+        return {...state,showCompany:!state.showCompany};
+      case 'screenWidth':
+        return {...state,width: window.innerWidth}
       default:
         throw new Error();
     }
   }
 export function NavContent() {
-    const [state, dispatch] = useReducer(reducer, {showFeatures:false,showCompany:false});
+    const [state, dispatch] = useReducer(reducer, {showFeatures:false,showCompany:false,width:window.innerWidth});
 
     const Features = [
     {name:'Todo List', source : todolist},
@@ -92,19 +94,20 @@ export function NavContent() {
     return (
         <>
          <div>
-            <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{setShowFeatures(!showFeatures)}}>Features <img className={`mt-1 ${showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
+            <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{dispatch({type:'showFeatures'})}}>Features <img className={`mt-1 ${state.showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
             <ul>
                 {Features.map((Features,key)=>{
-                return showFeatures &&   <li className="flex items-center gap-3"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
+                return state.showFeatures &&   <li className="flex items-center gap-3"><img src={Features.source} alt="" /> <a href="#">{Features.name}</a></li>
                 })}
             </ul>
-            <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{setShowFeatures(!showFeatures)}}>Company <img className={`mt-1 ${showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-            <ul>
+         </div>
+         <div>
+         <button className="flex gap-6 cursor-pointer items-center" onClick={()=>{dispatch({type:'showCompany'})}}>Company <img className={`mt-1 ${state.showCompany & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
+            <ul className={`${state.width > 768 ? `fixed `:``}`}>
                 {Company.map((Company,key)=>{
-                return showFeatures &&   <li className="flex items-center gap-3"><a href="#">{Company}</a></li>
+                return state.showCompany &&   <li className="flex items-center gap-3"><a href="#">{Company}</a></li>
                 })}
             </ul>
-            
          </div>
         </>
     );
