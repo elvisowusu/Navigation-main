@@ -3,3 +3,12 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+@layer components{
+    .navLi{
+        @apply hover:text-AlmostBlack flex items-center gap-3 mt-1;
+    }
+    .navbtn{
+        @apply hover:text-AlmostBlack flex gap-6 cursor-pointer items-center;
+    }
+}
