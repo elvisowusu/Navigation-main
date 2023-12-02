@@ -32,7 +32,7 @@ export const Body =()=>{
             <div className="flex flex-col items-center">
                 <h1 className="text-[2.5rem] md:text-left font-extrabold text-AlmostBlack mt-[2rem]">Make remote work</h1>
                 <p className="text-center md:text-left text-MediumGray text-[1.1rem] w-[21rem] mt-[1rem]">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-                <button className="hover:border hover:border-AlmostBlack outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] rounded-xl text-sm md:text-base mt-[1rem]">Learn more</button>
+                <button className="hover:border hover:border-AlmostBlack outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] rounded-xl text-base md:text-base mt-[1rem]">Learn more</button>
                 <div className="flex items-center justify-between w-[22rem] mt-[2rem]">
                     {
                         image.map((image,key)=>{
