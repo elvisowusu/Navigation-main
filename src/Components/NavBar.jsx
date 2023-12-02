@@ -48,8 +48,8 @@ export const NavBar =()=>{
                     screenWidth<768 && menuOpen?
                     <>
                     <div className="fixed right-0 bg-gray-400 opacity-70 w-full h-[192vh] z-10"></div>
-                    <div className="fixed right-0 bg-white w-2/3 h-[192vh] z-20 pt-[3.5rem] px-[3rem]"> 
-                        <div className="mt-[60rem] flex flex-col gap-3 items-start"> 
+                    <div className="fixed right-0 bg-white w-2/3 h-[192vh] z-20 pt-[3.5rem] px-[2rem]"> 
+                        <div className="mt-[40rem] flex flex-col gap-3 items-start"> 
                             <NavContent/>
                         </div>
                         <div className="flex flex-col items-center mt-[3rem] gap-4">
