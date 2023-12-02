@@ -27,7 +27,7 @@ export const Body =()=>{
     const image =[databiz,audiophile,meet,maker]
 
     return(
-        <div className="h-screen">
+        <div className="h-[190vh]">
             <div>{state.width > 768 ? <img src={desktop} alt="destop img"/>:<img src={mobile} alt="destop img"/>}</div>
             <div className="flex flex-col items-center">
                 <h1 className="text-[2.5rem] md:text-left font-extrabold text-AlmostBlack mt-[2rem]">Make remote work</h1>
