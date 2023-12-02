@@ -25,7 +25,7 @@ export const NavBar =()=>{
     return(
             <nav className={`text-MediumGray flex justify-between items-center ${screenWidth > 768 ? `py-[1.5rem]`:`py-[1.3rem]`} ${screenWidth > 768 ? `px-[2.7rem]`:`px-[1rem]`} text-[1.3rem] xl:bg-black`}>
                 <div className="flex gap-[4rem] items-start">
-                <img src={logo} width={screenWidth > 768? 110:80}/>
+                <img className="md:w-[9rem] lg:w-[9.5rem]" src={logo} width={80}/>
                 {
                     screenWidth>768?
                     <div className={`flex md:gap-[2rem] lg:gap-[3rem] z-40`}>
@@ -108,24 +108,24 @@ export function NavContent() {
         <>
          <div>
             <button className="navbtn" onClick={()=>{dispatch({type:'showFeatures'})}}>Features <img className={`mt-1 ${state.showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-            { state.showFeatures &&  <ul className={`bg-white px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl left-[9rem] mt-3`:``}`}>
+            { state.showFeatures &&  <ul className={`bg-white px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl left-[9rem] xl:left-[11.3rem] mt-3 xl:mt-6`:``}`}>
                 {Features.map((Features,key)=>{
-                return  <li className={`navLi ${state.width > 768 ? `mt-1`:`mb-4`}`}><img src={Features.source} width={17} alt="icon" /> <a href="#">{Features.name}</a></li>
+                return  <li className={`navLi md:mt-1 mb-3`}><img src={Features.source} width={17} alt="icon" /> <a href="#">{Features.name}</a></li>
                 })}
             </ul>
             }
          </div>
          <div>
          <button className="navbtn" onClick={()=>{dispatch({type:'showCompany'})}}>Company <img className={`mt-1 ${state.showCompany & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
-           {state.showCompany && <ul className={`bg-white px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl mt-3`:``}`}>
+           {state.showCompany && <ul className={`bg-white px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl mt-3 xl:mt-6`:``}`}>
                 {Company.map((Company,key)=>{
                 return   <li className={`navLi ${state.width > 768 ? `mt-1`:`mb-4`}`}><a href="#">{Company}</a></li>
                 })}
             </ul>
            }
          </div>
-         <button className="hover:text-AlmostBlack transition duration-200 ease-in text-base lg:text-lg">Careers</button>
-         <button className="hover:text-AlmostBlack transition duration-200 ease-in text-base lg:text-lg">About</button>
+         <button className="hover:text-AlmostBlack transition duration-200 ease-in text-base lg:text-lg xl:text-xl">Careers</button>
+         <button className="hover:text-AlmostBlack transition duration-200 ease-in text-base lg:text-lg xl:text-xl">About</button>
         </>
     );
 }
@@ -134,8 +134,8 @@ export function NavContent() {
 export function LoginOrSignUp() {
     return (
         <div className={`flex md:gap-[2rem] lg:gap-[3rem] mb-3`}>
-            <button className="hover:text-AlmostBlack transition duration-300 ease-in text-sm md:text-base lg:text-lg">Login</button>
-            <button className="border outline-none text-sm md:text-base hover:text-AlmostBlack hover:border-AlmostBlack transition duration-300 ease-in px-[1.5rem] py-[0.5rem] rounded-2xl lg:text-lg">Register</button>
+            <button className="hover:text-AlmostBlack transition duration-300 ease-in text-sm md:text-base lg:text-lg xl:text-xl">Login</button>
+            <button className="border outline-none text-sm md:text-base xl:text-xl hover:text-AlmostBlack hover:border-AlmostBlack transition duration-300 ease-in px-[1.5rem] py-[0.5rem] rounded-2xl lg:text-lg xl:py-[0.8rem] xl:px-[2rem]">Register</button>
         </div>
     );
 }
