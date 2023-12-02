@@ -111,8 +111,8 @@ export function NavContent() {
             </ul>
            }
          </div>
-         <button className="hover:text-AlmostBlack mt-[0.1rem]">Careers</button>
-         <button className="hover:text-AlmostBlack mt-[0.1rem]">About</button>
+         <button className="hover:text-AlmostBlack">Careers</button>
+         <button className="hover:text-AlmostBlack">About</button>
         </>
     );
 }
