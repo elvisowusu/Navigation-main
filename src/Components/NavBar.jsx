@@ -91,7 +91,10 @@ const reducer = (state, action) => {
   }
 export function NavContent() {
     const [state, dispatch] = useReducer(reducer, {showFeatures:false,showCompany:false,width:window.innerWidth});
-
+    useEffect(()=>{
+        window.addEventListener('resize',()=>{dispatch({type:'screenWidth'})})
+        return ()=>{window.removeEventListener('resize',()=>{dispatch({type:'screenWidth'})})}
+    },[state.width])
     const Features = [
     {name:'Todo List', source : todolist},
     {name:'Calendar', source : calendar},

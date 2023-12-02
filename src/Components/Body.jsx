@@ -21,7 +21,8 @@ export const Body =()=>{
 
     const [state,dispatch]=useReducer(reducer,{width: window.innerWidth});
     useEffect(()=>{
-        dispatch({type:'screenWidth'})
+        window.addEventListener('resize',()=>{dispatch({type:'screenWidth'})})
+        return ()=>{window.removeEventListener('resize',()=>{dispatch({type:'screenWidth'})})}
     },[state.width])
 
     const image =[databiz,audiophile,meet,maker]
