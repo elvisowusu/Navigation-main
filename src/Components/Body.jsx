@@ -1,4 +1,4 @@
-import { useReducer } from "react"
+import { useEffect, useReducer } from "react"
 
 
 const reducer=(state,action)=>{
@@ -13,7 +13,9 @@ const reducer=(state,action)=>{
 export const Body =()=>{
 
     const [state,dispatch]=useReducer(reducer,{width: window.innerWidth});
-
+    useEffect(()=>{
+        dispatch({type:'screenWidth'})
+    },[state.width])
 
     return(
         <div className="h-screen">
