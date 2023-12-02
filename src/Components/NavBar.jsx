@@ -120,7 +120,7 @@ export function NavContent() {
 
 export function LoginOrSignUp() {
     return (
-        <div className={`flex gap-[3rem]`}>
+        <div className={`flex gap-[3rem] mb-3`}>
             <button className="hover:text-AlmostBlack text-base">Login</button>
             <button className="border outline-none text-base hover:text-AlmostBlack hover:border-AlmostBlack px-[1.5rem] py-[0.5rem] rounded-2xl">Register</button>
         </div>
