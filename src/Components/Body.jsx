@@ -22,8 +22,9 @@ export const Body =()=>{
         <div className="h-screen">
             <div>{state.width > 768 ? <img src={desktop} alt="destop img"/>:<img src={mobile} alt="destop img"/>}</div>
             <div className="flex flex-col items-center">
-                <h1 className="text-[2.5rem] font-extrabold text-AlmostBlack">Make remote work</h1>
-                <p className="text-center text-[1.2rem] w-[21rem]">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                <h1 className="text-[2.5rem] md:text-left font-extrabold text-AlmostBlack">Make remote work</h1>
+                <p className="text-center md:text-left text-[1.2rem] w-[21rem]">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                <button className="outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1rem] py-[0.5rem] rounded-xl text-sm md:text-base">Learn more</button>
             </div>
         </div>
     )
