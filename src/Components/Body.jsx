@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from "react"
-
+import mobile from '../assets/image-hero-mobile.png'
+import desktop from '../assets/image-hero-desktop.png'
 
 const reducer=(state,action)=>{
     switch(action.type){
@@ -19,7 +20,7 @@ export const Body =()=>{
 
     return(
         <div className="h-screen">
-            <div></div>
+            <div>{state.width > 768 ? <img src={desktop} alt="destop img"/>:<img src={mobile} alt="destop img"/>}</div>
             <div><h1>Make remote work</h1></div>
         </div>
     )
