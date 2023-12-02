@@ -23,7 +23,7 @@ export const NavBar =()=>{
      } 
     })
     return(
-            <nav className={`text-MediumGray flex justify-between items-center ${screenWidth > 768 ? `py-[1.5rem]`:`py-[1.3rem]`} ${screenWidth > 768 ? `px-[2.7rem]`:`px-[1rem]`} text-[1.3rem] sm:bg-red-300 md:bg-orange-500 lg:bg-green-400 xl:bg-black`}>
+            <nav className={`text-MediumGray flex justify-between items-center ${screenWidth > 768 ? `py-[1.5rem]`:`py-[1.3rem]`} ${screenWidth > 768 ? `px-[2.7rem]`:`px-[1rem]`} text-[1.3rem] xl:bg-black`}>
                 <div className="flex gap-[4rem] items-start">
                 <img src={logo} width={screenWidth > 768? 110:80}/>
                 {
