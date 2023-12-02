@@ -53,8 +53,8 @@ export const NavBar =()=>{
                             <NavContent/>
                         </div>
                         <div className="flex flex-col items-center mt-[3rem] gap-4">
-                        <button className="hover:text-AlmostBlack">Login</button>
-                        <button className="border outline-none hover:text-AlmostBlack hover:border-AlmostBlack w-full py-[0.5rem] rounded-2xl">Register</button>
+                        <button className="hover:text-AlmostBlack text-sm md:text-base">Login</button>
+                        <button className="border outline-none hover:text-AlmostBlack hover:border-AlmostBlack w-full py-[0.5rem] rounded-2xl text-sm md:text-base">Register</button>
                         </div>
                     </div>
                     </>
@@ -63,6 +63,16 @@ export const NavBar =()=>{
             </nav>
     )
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
