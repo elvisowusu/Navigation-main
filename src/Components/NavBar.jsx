@@ -111,8 +111,8 @@ export function NavContent() {
             </ul>
            }
          </div>
-         <button className="hover:text-AlmostBlack">Careers</button>
-         <button className="hover:text-AlmostBlack">About</button>
+         <button className="hover:text-AlmostBlack text-base">Careers</button>
+         <button className="hover:text-AlmostBlack text-base">About</button>
         </>
     );
 }
@@ -121,8 +121,8 @@ export function NavContent() {
 export function LoginOrSignUp() {
     return (
         <div className={`flex gap-[3rem]`}>
-            <button className="hover:text-AlmostBlack">Login</button>
-            <button className="border outline-none hover:text-AlmostBlack hover:border-AlmostBlack px-[1.5rem] py-[0.5rem] rounded-2xl">Register</button>
+            <button className="hover:text-AlmostBlack text-base">Login</button>
+            <button className="border outline-none text-base hover:text-AlmostBlack hover:border-AlmostBlack px-[1.5rem] py-[0.5rem] rounded-2xl">Register</button>
         </div>
     );
 }
