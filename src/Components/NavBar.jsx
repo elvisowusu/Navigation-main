@@ -23,17 +23,17 @@ export const NavBar =()=>{
      } 
     })
     return(
-            <nav className={`text-MediumGray flex justify-between items-center ${screenWidth > 768 ? `py-[1.5rem]`:`py-[1.3rem]`} ${screenWidth > 768 ? `px-[2.7rem]`:`px-[1rem]`} text-[1.3rem]`}>
+            <nav className={`text-MediumGray flex justify-between items-center ${screenWidth > 768 ? `py-[1.5rem]`:`py-[1.3rem]`} ${screenWidth > 768 ? `px-[2.7rem]`:`px-[1rem]`} text-[1.3rem] sm:bg-red-300 md:bg-orange-500 lg:bg-green-400`}>
                 <div className="flex gap-[4rem] items-start">
                 <img src={logo} width={screenWidth > 768? 110:80}/>
                 {
                     screenWidth>768?
-                    <div className={`flex gap-[3rem] z-40`}>
+                    <div className={`flex md:gap-[2rem] lg:gap-[3rem] z-40`}>
                         <NavContent/>
                     </div>:null
                 }
                 </div>
-                <div className="flex gap-[2.8rem]">
+                <div className="flex lg:gap-[2.8rem]">
                     {
                         screenWidth>768?
                         <>
@@ -120,7 +120,7 @@ export function NavContent() {
 
 export function LoginOrSignUp() {
     return (
-        <div className={`flex gap-[3rem] mb-3`}>
+        <div className={`flex md:gap-[2rem] lg:gap-[3rem] mb-3`}>
             <button className="hover:text-AlmostBlack text-base">Login</button>
             <button className="border outline-none text-base hover:text-AlmostBlack hover:border-AlmostBlack px-[1.5rem] py-[0.5rem] rounded-2xl">Register</button>
         </div>

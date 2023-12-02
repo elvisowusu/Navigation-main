@@ -6,7 +6,7 @@
 
 @layer components{
     .navLi{
-        @apply hover:text-AlmostBlack text-sm flex items-center gap-3;
+        @apply hover:text-AlmostBlack text-sm sm:text-base  flex items-center gap-3;
     }
     .navbtn{
         @apply hover:text-AlmostBlack text-base flex gap-6 cursor-pointer items-center;
