@@ -12,9 +12,9 @@
         @apply active:text-MediumGray hover:text-AlmostBlack transition duration-300 ease-in text-base lg:text-lg xl:text-xl flex gap-6 cursor-pointer items-center;
     }
     .bodybtn{
-        @apply hover:border active:bg-MediumGray hover:border-AlmostBlack transition duration-300 ease-in outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] sm:px-[2rem] md:px-[3rem] lg:px-[2.2rem] sm:py-[0.6rem] md:py-[1rem] rounded-xl text-base sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.4rem] mt-[1rem] sm:mt-[0.7rem] lg:mb-[6rem] xl:mb-[6.8rem];
+        @apply hover:border active:bg-MediumGray hover:border-AlmostBlack transition duration-300 ease-in outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] sm:px-[2rem] md:px-[3rem] lg:px-[2.2rem] sm:py-[0.6rem] md:py-[1rem] rounded-xl text-base sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.4rem] mt-[1rem] sm:mt-[0.7rem] lg:mb-[6rem];
     }
     .paragraph{
-        @apply text-center lg:text-left text-MediumGray text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[1.5rem] w-[21rem] sm:w-[29rem] md:w-[44rem] lg:w-[30rem] mt-[1rem] sm:mt-[0.7rem] lg:mb-[2.5rem] xl:mb-[2.8rem];
+        @apply text-center lg:text-left text-MediumGray text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[1.5rem] w-[21rem] sm:w-[29rem] md:w-[44rem] lg:w-[30rem] mt-[1rem] sm:mt-[0.7rem] lg:mb-[2.5rem];
     }
 }
