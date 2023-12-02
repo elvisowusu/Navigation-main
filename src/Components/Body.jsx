@@ -31,13 +31,13 @@ export const Body =()=>{
         <div>
             <div>{state.width > 768 ? <img src={desktop} alt="destop img"/>:<img src={mobile} alt="destop img"/>}</div>
             <div className="flex flex-col items-center">
-                <h1 className="text-[2.5rem] md:text-left font-extrabold text-AlmostBlack mt-[2rem]">Make remote work</h1>
-                <p className="text-center md:text-left text-MediumGray text-[1.1rem] w-[21rem] mt-[1rem]">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-                <button className="hover:border hover:border-AlmostBlack outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] rounded-xl text-base md:text-base mt-[1rem]">Learn more</button>
-                <div className="flex items-center justify-between w-[22rem] mt-[2rem]">
+                <h1 className="text-[2.5rem] sm:text-[5rem] md:text-left font-extrabold text-AlmostBlack mt-[2rem]">Make remote work</h1>
+                <p className="text-center md:text-left text-MediumGray text-[1.1rem] w-[21rem] sm:text-[1.7rem] sm:w-[29rem] mt-[1rem]">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                <button className="hover:border hover:border-AlmostBlack outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] sm:px-[2rem] sm:py-[0.6rem] rounded-xl text-base sm:text-[1.3rem] mt-[1rem]">Learn more</button>
+                <div className="flex items-center justify-between w-[22rem] sm:w-[37rem] mt-[2rem]">
                     {
                         image.map((image,key)=>{
-                            return <img className="w-[4rem]" key={key} src={image} alt="icon" />
+                            return <img className="w-[4rem] sm:w-[5rem]" key={key} src={image} alt="icon" />
                         })
                     }
                 </div>
