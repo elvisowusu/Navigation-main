@@ -31,9 +31,9 @@ export const Body =()=>{
         <div>
             <div>{state.width > 1024 ? <img src={desktop} alt="destop img"/>:<img className="md:w-full" src={mobile} alt="destop img"/>}</div>
             <div className="flex flex-col items-center">
-                <h1 className="text-[2.5rem] sm:text-[5rem] md:text-[6.5rem] lg:text-left font-extrabold text-AlmostBlack mt-[2rem] sm:mt-[1.5rem]">Make remote work</h1>
-                <p className="text-center lg:text-left text-MediumGray text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] w-[21rem] sm:w-[29rem] md:w-[44rem] mt-[1rem] sm:mt-[0.7rem]">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-                <button className="hover:border hover:border-AlmostBlack outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] sm:px-[2rem] md:px-[3rem] sm:py-[0.6rem] md:py-[1rem] rounded-xl text-base sm:text-[1.3rem] md:text-[1.5rem] mt-[1rem] sm:mt-[0.7rem]">Learn more</button>
+                <h1 className={`text-[2.5rem] sm:text-[5rem] md:text-[6.5rem] lg:text-left font-extrabold text-AlmostBlack mt-[2rem] sm:mt-[1.5rem]`}>Make remote work</h1>
+                <p className={`text-center lg:text-left text-MediumGray text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] w-[21rem] sm:w-[29rem] md:w-[44rem] mt-[1rem] sm:mt-[0.7rem]`}>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                <button className={`bodybtn`}>Learn more</button>
                 <div className={`flex items-center justify-between w-[22rem] sm:w-[36rem] ${state.width > 1024 ? `md:w-[30rem]`:`md:w-[50rem]`}  mt-[2rem] sm:mt-[1.5rem] sm:mb-[2rem]`}>
                     {
                         image.map((image,key)=>{

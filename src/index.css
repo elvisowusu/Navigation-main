@@ -11,4 +11,7 @@
     .navbtn{
         @apply hover:text-AlmostBlack text-base flex gap-6 cursor-pointer items-center;
     }
+    .bodybtn{
+        @apply hover:border hover:border-AlmostBlack outline-none text-AlmostWhite hover:text-AlmostBlack bg-AlmostBlack hover:bg-AlmostWhite px-[1.5rem] py-[0.6rem] sm:px-[2rem] md:px-[3rem] sm:py-[0.6rem] md:py-[1rem] rounded-xl text-base sm:text-[1.3rem] md:text-[1.5rem] mt-[1rem] sm:mt-[0.7rem];
+    }
 }
