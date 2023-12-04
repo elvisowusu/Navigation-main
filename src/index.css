@@ -6,7 +6,7 @@
 
 @layer components{
     .navLi{
-        @apply active:text-MediumGray hover:text-AlmostBlack transition duration-300 ease-in text-sm sm:text-base lg:text-lg xl:text-xl flex items-center gap-3;
+        @apply active:text-MediumGray hover:text-AlmostBlack transition duration-300 ease-in text-sm sm:text-base lg:text-lg xl:text-xl flex items-center gap-3 md:mt-1 mb-3;
     }
     .navbtn{
         @apply active:text-MediumGray hover:text-AlmostBlack transition duration-300 ease-in text-base lg:text-lg xl:text-xl flex gap-6 cursor-pointer items-center;

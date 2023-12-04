@@ -110,7 +110,7 @@ export function NavContent() {
             <button className="navbtn" onClick={()=>{dispatch({type:'showFeatures'})}}>Features <img className={`mt-1 ${state.showFeatures & true? `-rotate-180 transition ease-in-out duration-300 `:``}`} src={arrowDown} alt="" /></button>
             { state.showFeatures &&  <ul className={`bg-white px-8 py-6 rounded-xl ${state.width > 768 ? `fixed shadow-2xl left-[9rem] xl:left-[11.3rem] mt-3 xl:mt-6`:``}`}>
                 {Features.map((Features,key)=>{
-                return  <li className={`navLi md:mt-1 mb-3`}><img src={Features.source} width={17} alt="icon" /> <a href="#">{Features.name}</a></li>
+                return  <li className={`navLi`}><img src={Features.source} width={17} alt="icon" /> <a href="#">{Features.name}</a></li>
                 })}
             </ul>
             }
