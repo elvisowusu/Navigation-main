@@ -28,7 +28,7 @@ export const Body =()=>{
     const image =[databiz,audiophile,meet,maker]
 
     return(
-        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:justify-between lg:h-[89vh] lg:px-[3rem] xl:px-[15rem] lg:py-[27rem] lx:py-[20rem] lx:gap-[1rem]">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:justify-between lg:h-[89vh] lg:px-[3rem] xl:px-[15rem] lg:py-[27rem] lx:py-[10rem] lx:gap-[1rem]">
             <div >{state.width > 1024 ? <img className="lg:w-[31.25rem] xl:w-[33rem]" src={desktop} alt="destop img" />:<img className="md:w-full" src={mobile} alt="destop img"/>}</div>
             <div className="flex flex-col items-center lg:items-start lg:mt-[5.5rem]">
                 <h1 className={`text-[2.5rem] sm:text-[5rem] md:text-[6.5rem] lg:leading-[5rem] lg:w-[36rem] font-extrabold text-AlmostBlack mt-[2rem] sm:mt-[1.5rem] lg:mb-[2.5rem]`}>Make remote work</h1>
